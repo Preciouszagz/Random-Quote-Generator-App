@@ -1,0 +1,264 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+  /* @font-face{
+    font-family: Autography;
+    src: url(fonts/Autography.otf) format(opentype);
+  } */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: aliceblue;
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.header .header-info{
+    background-color: rgb(150, 245, 245);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+
+header nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;   
+}
+
+header nav ul li{
+    margin: 10px;
+    font-size: 1.1rem;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: rgb(4, 126, 126);
+    font-weight: 450;
+}
+
+header nav ul li a:hover{
+    color: #013636;
+    font-weight: 600;
+}
+
+.header .logo h1{
+    color: rgb(4, 126, 126);
+    font-size: 30px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%; 
+    max-width: 800px; 
+    margin: 0 auto;
+    background: rgb(150, 245, 245);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.container h2{
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(4, 126, 126);
+    text-align: center;
+    position: relative;
+}
+
+.container h2::after{
+    content: '';
+    height: 3px;
+    width: 130px;
+    border-radius: 3px;
+    background: rgb(4, 126, 126);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container .content{
+    margin: 35px 0;
+}
+
+.container .content .quote-container.animated.fadeIn{
+    animation-duration: 1.5s;
+    animation-name: fadeIn;
+}
+
+.container .content .quote-container.animated.flipInX{
+    animation-name: flipInX;
+    animation-duration: 1.5s;
+}
+
+.container .content .quote-container.animated.slideInDown{
+    animation-name: slideInDown;
+    animation-duration: 1.5s;
+}
+
+.container .content .quote-container.animated.backInDown{
+    animation-name: backInDown;
+    animation-duration: 1.5s;
+}
+
+.container .content .quote-container.animated.fadeInDown{
+    animation-name: fadeInDown;
+    animation-duration: 1.5s;
+}
+
+.container .content .quote-container.animated.zoomIn{
+    animation-name: zoomIn;
+    animation-duration: 1.5s;
+}
+
+.container .content .quote-container.animated.bounceIn{
+    animation-name: bounceIn;
+    animation-duration: 1.5s;
+}
+
+
+.container .content .quote-area{
+    display: flex;
+    justify-content: center;
+}
+
+.container .content .quote-area i{
+    font-size: 25px;
+}
+
+.container .content .quote-area i:first-child{
+    margin: 3px 10px 0 0;
+}
+
+.container .content .quote-area i:last-child{
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 3px 10px;
+}
+
+.container .content .quote-area .quote{
+    font-size: 22px;
+    text-align: center;
+    word-break: break-word;
+}
+
+.container .content .author{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    font-style: italic;
+    justify-content: flex-end;
+}
+
+.container .content .author span:first-child{
+    margin-right: 5px;
+}
+
+.container .content .author span:last-child{
+    margin-bottom: 35px;
+}
+
+.container .content .buttons{
+    border-top: 1px solid rgb(4, 126, 126);
+}
+
+.container .content .buttons .features{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.container .content .buttons .features ul{
+    display: flex;
+}
+
+.container .content .buttons .features ul li{
+    list-style: none;
+    margin: 0 5px;
+    border: 2px solid rgb(4, 126, 126) ;
+    border-radius: 50%;
+    height: 47px;
+    width: 47px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: rgb(4, 126, 126);
+    transition: all 0.3s ease;
+}
+
+.features ul li:first-child{
+    margin-left: 0;
+}
+
+.container .content .buttons .features ul li:is(:hover, .active){
+    color: #fff;
+    background: rgb(4, 126, 126);
+}
+
+ul .sound .active{
+    pointer-events: none;
+} 
+
+.container .content .buttons .features button{
+    border: none;
+    outline: none;
+    background: rgb(4, 126, 126);
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 13px 22px;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+
+}
+
+.container .content .buttons .features button:hover {
+    background: #013636;
+}
+
+button.loading{
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+button.disabled-btn {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.share-icons{
+     margin: 10px 0 0 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header .logo h1{
+      font-size: 18px;
+    }
+  
+    header nav ul li{
+      font-size: 13px;
+    }
+}
