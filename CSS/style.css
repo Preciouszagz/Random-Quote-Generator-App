@@ -271,6 +271,18 @@ button.disabled-btn {
       font-size: 13px;
     }
 
+    .container h2{
+    font-size: 35px;
+    }
+
+    .container .content .quote-area .quote{
+        font-size: 17px;
+    }
+    
+    .container .content .author{
+        font-size: 14px;
+    }
+
     .container .content .buttons .features button{
         font-size: 14px;
         padding: 11px 19px;
