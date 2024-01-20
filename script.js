@@ -64,13 +64,13 @@ soundBtn.addEventListener("click", () => {
 
 copyBtn.addEventListener("click", ()=>{
     //copying the quote text on copyBtn click
-    //writeText() property writes the specified text to the system clipboard
-    navigator.clipboard.writeText(quoteText.innerText);
+    let copiedText = `${quoteText.innerText} --- ${authorName.innerText}`;
+    navigator.clipboard.writeText(copiedText);
 });
 
 fbBtn.addEventListener("click", ()=>{
     let facebookMessage = `Check out this quote: ${quoteText.innerText} --- ${authorName.innerText}`;
-    let placeholderUrl = 'https://example.com'; // Replace with your actual URL when your site goes live
+    let placeholderUrl = 'wisdom-nuggets.vercel.app';
     let facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(placeholderUrl)}&quote=${encodeURIComponent(facebookMessage)}`;
     window.open(facebookUrl, "_blank");
 
@@ -97,13 +97,3 @@ quoteBtn.addEventListener("click", () => {
         randomQuote();
     }
 });
-
-/* function triggerAddToAny() {
-    if (window.a2a) {
-      window.a2a.init();
-      window.a2a.refresh();
-    }
-  }
-
-  // Call the function when needed, for example, after updating the quote
- /*  triggerAddToAny(); */
