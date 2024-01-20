@@ -48,6 +48,15 @@ header nav ul li a:hover{
   font-size: 30px;
 }
 
+.header .logo h1 a{
+  text-decoration: none;
+  color: rgb(4, 126, 126);
+}
+
+.header .logo h1 a:hover{
+  color: #013636;
+}
+
 main .welcome{
     text-align: center;
     font-size: 1.3rem;
@@ -122,6 +131,10 @@ button:hover {
     font-size: 13px;
   }
 
+  main .welcome{
+    font-size: 1rem;
+  }
+
   main h2{
     font-size: 2.5rem;
   }
@@ -133,4 +146,18 @@ button:hover {
   main .wise-word .wise-one{
     font-size: 0.8rem;
   }
+
+  .more-info{
+    padding: 0 10px;
+  }
+
+  p span{
+    font-size: 0.9rem;
+  }
+
+  button{
+    margin: 17px auto;
+    padding: 10px 19px;
+    font-size: 13px;
+}
 }
