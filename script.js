@@ -10,6 +10,7 @@ fbBtn = document.querySelector(".a2a_button_facebook"),
 whatsappBtn = document.querySelector(".a2a_button_whatsapp"),
 twitterBtn = document.querySelector(".a2a_button_twitter"),
 synth = speechSynthesis;
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 
 // Function to fetch and display a random quote
 function randomQuote(){
@@ -35,7 +36,7 @@ function randomQuote(){
     });
 }
 
-soundBtn.addEventListener("click", () => {
+soundBtn.addEventListener("click", (event) => {
     if (!quoteBtn.classList.contains("loading")) {
         let utterance = new SpeechSynthesisUtterance(`${quoteText.innerText} by ${authorName.innerText}`);
 
@@ -55,13 +56,17 @@ soundBtn.addEventListener("click", () => {
 
         // Add the 'disabled-btn' class to quoteBtn
         quoteBtn.classList.add("disabled-btn");
+
+        event.preventDefault();
     }
 });
 
-copyBtn.addEventListener("click", ()=>{
+copyBtn.addEventListener("click", (event)=>{
     //copying the quote text on copyBtn click
     let copiedText = `${quoteText.innerText} --- ${authorName.innerText}`;
     navigator.clipboard.writeText(copiedText);
+
+    event.preventDefault();
 });
 
 fbBtn.addEventListener("click", ()=>{
