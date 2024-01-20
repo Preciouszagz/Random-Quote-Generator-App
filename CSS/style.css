@@ -56,6 +56,15 @@ header nav ul li a:hover{
     font-size: 30px;
 }
 
+.header .logo h1 a{
+    text-decoration: none;
+    color: rgb(4, 126, 126);
+}
+
+.header .logo h1 a:hover{
+    color: #013636;
+}
+
 main{
     display: flex;
     align-items: center;
