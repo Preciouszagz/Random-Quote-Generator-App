@@ -270,4 +270,9 @@ button.disabled-btn {
     header nav ul li{
       font-size: 13px;
     }
+
+    .container .content .buttons .features button{
+        font-size: 14px;
+        padding: 11px 19px;
+    }
 }
