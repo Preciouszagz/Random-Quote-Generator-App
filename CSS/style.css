@@ -221,6 +221,14 @@ main{
     background: rgb(4, 126, 126);
 }
 
+.container .content .buttons .features ul li.copy {
+    transition: background-color 0.3s ease;
+}
+
+.container .content .buttons .features ul li.copy.button-effect:active {
+    background-color: #012e2e;
+}
+
 ul .sound .active{
     pointer-events: none;
 } 
