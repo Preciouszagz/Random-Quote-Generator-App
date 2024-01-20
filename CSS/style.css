@@ -229,16 +229,6 @@ main{
     background-color: #70fafa;
 }
 
-.container .content .buttons .features ul li.touchable:active {
-    color: #fff;
-    background: rgb(4, 126, 126);
-}
-
-.container .content .buttons .features ul li.copy.touchable:active {
-    color: #fff;
-    background: #013636;
-}
-
 ul .sound .active{
     pointer-events: none;
 } 
@@ -330,17 +320,5 @@ button.disabled-btn {
     .github-link{
         padding: 0 25px;
         font-size: 0.7rem;
-    }
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .container .content .buttons .features ul li.touchable:hover {
-        color: #fff;
-        background: rgb(4, 126, 126);
-    }
-
-    .container .content .buttons .features ul li.copy.touchable:hover {
-        color: #fff;
-        background: #013636;
     }
 }
