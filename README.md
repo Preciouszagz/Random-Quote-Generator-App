@@ -21,4 +21,5 @@ Wisdom Nuggets Website Application: A Random Quite Generator. This application h
 ## Resources:
 - Quotable API: Quotable Github Repository - https://github.com/lukePeavey/quotable
 - Font Icons - https://fontawesome.com
-- Tidio for chat function - https://www.tidio.com 
+- Tidio for chat function - https://www.tidio.com
+- Quote Animation - https://animate.style
