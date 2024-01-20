@@ -38,6 +38,16 @@ function randomQuote(){
 soundBtn.addEventListener("click", () => {
     if (!quoteBtn.classList.contains("loading")) {
         let utterance = new SpeechSynthesisUtterance(`${quoteText.innerText} by ${authorName.innerText}`);
+
+        // Listen for the 'end' event on the utterance
+        utterance.addEventListener('end', () => {
+            // Remove 'active' class from soundBtn
+            soundBtn.classList.remove("active");
+
+            // Remove 'disabled-btn' class from quoteBtn
+            quoteBtn.classList.remove("disabled-btn");
+        });
+
         synth.speak(utterance);
 
         // Add the 'active' class to soundBtn
@@ -45,20 +55,6 @@ soundBtn.addEventListener("click", () => {
 
         // Add the 'disabled-btn' class to quoteBtn
         quoteBtn.classList.add("disabled-btn");
-
-        // Set an interval to check if the synthesizer is still speaking
-        const soundCheck = setInterval(() => {
-            if (!synth.speaking) {
-                // If not speaking, remove 'active' class from soundBtn
-                soundBtn.classList.remove("active");
-                
-                // Remove 'disabled-btn' class from quoteBtn
-                quoteBtn.classList.remove("disabled-btn");
-
-                // Clear the interval
-                clearInterval(soundCheck);
-            }
-        }, 10);
     }
 });
 
