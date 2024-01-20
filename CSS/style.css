@@ -256,6 +256,27 @@ button.disabled-btn {
      margin: 10px 0 0 5px;
 }
 
+.github-link{
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 25px;
+    color: rgb(4, 126, 126);
+    font-weight: 500;
+}
+
+.github-link a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+}
+
+.github-link a:hover{
+    text-decoration: underline;
+}
+
+
+
 @media only screen and (max-width: 768px) {
     .container {
         padding: 20px;
@@ -286,5 +307,10 @@ button.disabled-btn {
     .container .content .buttons .features button{
         font-size: 14px;
         padding: 11px 19px;
+    }
+
+    .github-link{
+        padding: 0 25px;
+        font-size: 0.7rem;
     }
 }
